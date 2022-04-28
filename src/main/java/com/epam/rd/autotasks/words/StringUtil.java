@@ -13,7 +13,7 @@ public class StringUtil {
             return 0;
         }
         sample = sample.trim();
-        Pattern pattern = Pattern.compile(sample + "\\b", Pattern.CASE_INSENSITIVE);
+        Pattern pattern = Pattern.compile("\\b" + sample + "\\b", Pattern.CASE_INSENSITIVE);
         for (String word : words) {
             Matcher matcher = pattern.matcher(word);
             if (matcher.find()) {
